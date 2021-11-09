@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat... - It is all about friendship</title>
+</head>
+<body>
+    <div class="BG">
+        <h1>Chat
+                <span class="dot1" >.</span>
+                <span class="dot2" >.</span>
+                <span class="dot3" >.</span>
+                <span class="dot4" >.</span>
+        </h1>
+    </div>
+    <style>
+    .BG span.dot1{
+        color: green;
+        width:10px;
+        height: 30px;
+        margin: 0 2px;
+        display: inline-block;
+        animation-name: dots;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 1.4s;
+    }
+    .BG span.dot2{
+        color: green;
+        width:10px;
+        height: 30px;
+        margin: 0 2px;
+        display: inline-block;
+        animation-name: dots;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 1.4s;
+    }
+    .BG span.dot3{
+        color: green;
+        width:10px;
+        height: 30px;
+        margin: 0 2px;
+        display: inline-block;
+        animation-name: dots;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 1.4s;
+    }
+    .BG span.dot4{
+        color: green;
+        width:10px;
+        height: 30px;
+        margin: 0 2px;
+        display: inline-block;
+        animation-name: dots;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 1.4s;
+    }
+    .BG span.dot1{
+        color: red;
+    }
+    .BG span.dot2{
+        color: green;
+    }
+    .BG span.dot3{
+        color: blue;
+    }
+    .BG span.dot4{
+        color: white;
+    }
+    .BG span:nth-child(2){
+        animation-delay: 0.4s;
+    }
+    .BG span:nth-child(3){
+        animation-delay: 0.8s;
+    }
+    .BG span:nth-child(4){
+        animation-delay: 1s;
+    }
+    .BG span:nth-child(5){
+        animation-delay: 1.2s;
+    }
+    @keyframes dots{
+        40%{
+           transform: translateY(0px); 
+        }
+        50%{
+           transform: translateY(-20px); 
+        }
+        60%{
+           transform: translateY(-10px); 
+        }
+        70%{
+           transform: translateY(-5px); 
+        }
+    }
+</style>
+<div class="app">
+    <div class="screen join-screen active">
+        <div class="form">
+            <h1>Join 
+                <span class="span0">Chat</span>
+                <span class="span1">.</span> 
+                <span class="span2">.</span>
+                <span class="span3">.</span>
+                <span class="span4">.</span>
+            </h1>
+            <div class="form-input">
+                <label>Username</label>
+                <input type="text" id="username">
+            </div>
+            <div class="form-input">
+                <button id="join-user">Join</button>
+            </div>
+        </div>
+    </div>
+    <div class="screen chat-screen">
+        <div class="header">
+            <div class="logo">CHAT
+                <span class="span1">.</span> 
+                <span class="span2">.</span>
+                <span class="span3">.</span>
+                <span class="span4">.</span>
+            </div>
+            <button id="exit-chat">Exit..</button>
+        </div>
+        <div class="messages">
+           
+        </div>
+        <div class="chatbox">
+            <input type="text" id="message-input">
+            <button id="send-message">Send..</button>
+        </div>
+    </div>
+</div>
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="code.js"></script>
+  
+</body>
+</html>
